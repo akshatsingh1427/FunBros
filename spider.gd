@@ -1,6 +1,6 @@
 extends Node2D
 
-# ================= CONSTANTS =================
+
 const SPEED := 60.0
 const CHASE_SPEED := 200.0
 const REVIVE_TIME := 2.0
@@ -11,7 +11,7 @@ const VERTICAL_DEAD_ZONE := 6.0
 const MAX_REVIVES := 3
 const SPIDER_ROAM_RANGE := 160.0   
 
-# ================= VARIABLES =================
+
 var direction := 1
 var is_dead := false
 var revive_timer := 0.0
@@ -21,10 +21,10 @@ var player_ref: Node2D = null
 var revives_left := MAX_REVIVES
 var patrol_center_x := 0.0
 
-# 🔒 HARD DAMAGE LOCK
+
 var can_kill_player := true
 
-# ================= NODES =================
+
 @onready var ray_cast_right := $RayCastRight
 @onready var ray_cast_left := $RayCastLeft
 @onready var sprite := $AnimatedSprite2D
@@ -32,12 +32,12 @@ var can_kill_player := true
 @onready var killzone := $KillZone
 @onready var player_detector := $PlayerDetector
 
-# ================= READY =================
+
 func _ready() -> void:
 	sprite.play("idle")
 	patrol_center_x = global_position.x
 
-# ================= PROCESS =================
+
 func _process(delta: float) -> void:
 	if is_dead:
 		handle_revive(delta)

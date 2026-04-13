@@ -32,5 +32,4 @@ func play_enemy_death_sound():
 	get_tree().current_scene.add_child(sound)
 	sound.play()
 
-	# Auto cleanup after sound finishes
 	sound.finished.connect(sound.queue_free)

@@ -9,7 +9,6 @@ func _ready():
 
 
 func _on_body_entered(body):
-	# Only Player can teleport
 	if body.name != "Player":
 		return
 

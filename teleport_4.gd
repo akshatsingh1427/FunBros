@@ -1,6 +1,6 @@
 extends Area2D
 
-# Path of the next level
+
 @export var next_level: String = "res://scenes/end.tscn"
 
 func _ready():
@@ -9,7 +9,7 @@ func _ready():
 
 
 func _on_body_entered(body):
-	# Only Player can teleport
+
 	if body.name != "Player":
 		return
 

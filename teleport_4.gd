@@ -16,8 +16,6 @@ func _on_body_entered(body):
 	print("Player entered teleport")
 	print("Loading:", next_level)
 
-	# Safety reset
 	Engine.time_scale = 1.0
 
-	# Change scene (teleport)
 	get_tree().change_scene_to_file(next_level)

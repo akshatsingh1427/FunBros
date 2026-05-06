@@ -5,7 +5,7 @@ extends Area2D
 
 func _ready():
 	monitoring = true
-	monitorable = true
+	monitorable = false
 
 
 func _on_body_entered(body):

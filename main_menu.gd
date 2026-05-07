@@ -10,7 +10,6 @@ func _on_play_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 
-func _process(_delta):
-	# ESC always exits from menu
+func _process(_delta): 
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()

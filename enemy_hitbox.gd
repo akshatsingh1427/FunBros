@@ -4,7 +4,6 @@ func _on_body_entered(body):
 	if body.name != "Player":
 		return
 
-	# ✅ ROLL KILL
 	if body.is_rolling:
 		get_parent().die()
 		return
